@@ -78,7 +78,43 @@
             <p>By participating, you'll help create a uniquely valuable view of climate technology demand—one that comes directly from market participants rather than surveys or third-party analysis. This direct market intelligence will inform our upcoming research report on the state of supply and demand in the 2025 climate economy, providing actionable insights for the entire ecosystem.</p>
         </section>
         
-        <a href="#" class="cta-button">SUBMIT YOUR SIGNAL</a>
+        <section class="form-section">
+            <h2>Send Your Signal</h2>
+            <form action="https://formspree.io/f/xpwpzgpz" method="POST">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="company">Company:</label>
+                    <input type="text" id="company" name="company" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="title">Title:</label>
+                    <input type="text" id="title" name="title" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label>Would you like to learn more in a quick call?</label>
+                    <div class="radio-options">
+                        <input type="radio" id="call-yes" name="interested_in_call" value="Yes">
+                        <label for="call-yes">Yes</label>
+                        
+                        <input type="radio" id="call-no" name="interested_in_call" value="No">
+                        <label for="call-no">No</label>
+                    </div>
+                </div>
+                
+                <button type="submit" class="submit-button">SUBMIT YOUR SIGNAL</button>
+            </form>
+        </section>
     </main>
     
     <footer class="container">
