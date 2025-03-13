@@ -214,3 +214,102 @@ footer {
         padding: 20px 0;
     }
 }
+
+/* Form Section Styling */
+.form-section {
+    margin: 3rem 0;
+    background-color: #f9f9f9;
+    padding: 2.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.form-section h2 {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    color: #0d8c45;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"] {
+    width: 100%;
+    padding: 0.875rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus {
+    border-color: #0d8c45;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(13, 140, 69, 0.1);
+}
+
+.radio-options {
+    display: flex;
+    gap: 2rem;
+    margin-top: 0.5rem;
+}
+
+.radio-options input[type="radio"] {
+    margin-right: 0.5rem;
+}
+
+.radio-options label {
+    display: inline-flex;
+    align-items: center;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+.submit-button {
+    display: block;
+    width: 100%;
+    background-color: #0d8c45;
+    color: white;
+    border: none;
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+    border-radius: 4px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background-color 0.3s, transform 0.2s;
+    margin-top: 1rem;
+}
+
+.submit-button:hover {
+    background-color: #076b33;
+}
+
+.submit-button:active {
+    transform: translateY(1px);
+}
+
+/* Make the form responsive */
+@media (max-width: 768px) {
+    .form-section {
+        padding: 1.5rem;
+    }
+    
+    .radio-options {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
