@@ -347,3 +347,56 @@ footer p {
         margin-bottom: 1rem;
     }
 }
+
+/* Partner Logos Section */
+.partners-logos {
+    padding: 4rem 0;
+    background-color: var(--light);
+    text-align: center;
+}
+
+.logo-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.placeholder-logo {
+    width: 150px;
+    height: 80px;
+    background-color: var(--gray);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.875rem;
+    font-weight: 500;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease;
+}
+
+.placeholder-logo:hover {
+    transform: scale(1.1);
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .logo-container {
+        gap: 1rem;
+    }
+
+    .placeholder-logo {
+        width: 120px;
+        height: 60px;
+    }
+}
+
+@media (max-width: 576px) {
+    .placeholder-logo {
+        width: 100px;
+        height: 50px;
+    }
+}
+
