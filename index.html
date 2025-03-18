@@ -131,35 +131,59 @@
         </section>
 
         <section class="form-section">
-            <div class="form-container">
-                <h2>Send Your Signal</h2>
-                <form action="https://formspree.io/f/xpwpzgpz" method="POST">
-                    <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="company">Company</label>
-                        <input type="text" id="company" name="company" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="title">Title</label>
-                        <input type="text" id="title" name="title" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-
-                    <button type="submit" class="submit-button">
-                        SUBMIT YOUR SIGNAL
-                    </button>
-                </form>
+    <div class="form-container">
+        <h2>Send Your Signal</h2>
+        <form action="https://formspree.io/f/xpwpzgpz" method="POST" id="signalForm">
+            <!-- Hidden fields for email configuration -->
+            <input type="hidden" name="_subject" value="New Signal from SendTheSignal.earth">
+            <input type="hidden" name="_next" value="https://sendthesignal.earth/thank-you/">
+            <input type="hidden" name="_autoresponse" value="Thank you for sending the signal! To ensure you receive our follow-up communications, please add contact@sendthesignal.earth to your contacts or safe senders list. We'll be in touch shortly with your access to our search portal.">
+            
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
             </div>
-        </section>
+            
+            <div class="form-group">
+                <label for="company">Company</label>
+                <input type="text" id="company" name="company" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="title">Title</label>
+                <input type="text" id="title" name="title" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            
+            <!-- Add consent checkbox with styling -->
+            <div class="form-group checkbox-group" style="display: flex; align-items: flex-start; margin-bottom: 1.5rem;">
+                <input type="checkbox" id="consent" name="consent" required style="margin-top: 0.25rem; margin-right: 0.5rem; min-width: 18px; height: 18px;">
+                <label for="consent" style="font-size: 0.9rem; line-height: 1.4;">I agree to receive follow-up communications from SendTheSignal and partner organizations</label>
+            </div>
+
+            <button type="submit" class="submit-button">
+                SUBMIT YOUR SIGNAL
+            </button>
+        </form>
+    </div>
+</section>
+
+<!-- JavaScript to enhance email deliverability -->
+<script>
+document.getElementById('signalForm').addEventListener('submit', function(e) {
+    // Store email domain in localStorage for thank-you page
+    const email = document.getElementById('email').value;
+    const domain = email.split('@')[1];
+    localStorage.setItem('userEmailDomain', domain);
+    
+    // We'll continue with normal form submission
+    // The form will redirect to thank-you page as specified in _next hidden field
+});
+</script>
     </main>
     
     <footer class="container">
