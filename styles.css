@@ -274,6 +274,7 @@ footer {
 }
 
 <!-- CSS for the partner logos section -->
+<!-- CSS for the partner logos section with clickable logos -->
 <style>
 /* Partner Logos Section */
 .partners-logos {
@@ -289,6 +290,13 @@ footer {
     justify-content: center;
     align-items: center;
     margin: 2rem auto;
+}
+
+/* Logo link styling */
+.logo-link {
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
 }
 
 /* Base styles for all logo boxes */
@@ -327,7 +335,7 @@ footer {
 }
 
 /* Hover effect */
-.logo-box:hover {
+.logo-box:hover, .logo-link:hover .logo-box {
     transform: scale(1.05);
 }
 
