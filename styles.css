@@ -361,13 +361,3 @@ footer {
     }
 }
 </style>
-
-
-<style>
-/* Only apply background to the VF logo container */
-a[href="https://www.vestedfutures.io"] .logo-box.has-logo {
-    background-color: #000000;
-    border-radius: 8px;
-    padding: 10px;
-}
-</style>
