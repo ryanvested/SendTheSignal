@@ -273,8 +273,7 @@ footer {
     text-align: center;
 }
 
-<!-- CSS for the partner logos section -->
-<!-- CSS for the partner logos section with clickable logos -->
+<!-- Updated CSS for better image display -->
 <style>
 /* Partner Logos Section */
 .partners-logos {
@@ -324,14 +323,19 @@ footer {
 .logo-box.has-logo {
     background-color: transparent;
     border: none;
-    padding: 15px;
+    padding: 5px; /* Reduced padding */
 }
 
-/* Style for the partner logos */
+/* Enhanced style for the partner logos */
 .partner-logo {
     max-width: 100%;
     max-height: 100%;
     object-fit: contain;
+    display: block; /* Ensures proper image display */
+    height: auto; /* Maintains aspect ratio */
+    width: auto; /* Maintains aspect ratio */
+    min-height: 30px; /* Ensures a minimum visible size */
+    min-width: 30px; /* Ensures a minimum visible size */
 }
 
 /* Hover effect */
