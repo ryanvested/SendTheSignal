@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Send The Signal - Thank You">
+    <meta property="og:description" content="Thank you for joining the Send The Signal Campaign">
+    <meta property="og:url" content="https://sendthesignal.earth/thank-you/">
+    <meta property="og:image" content="https://sendthesignal.earth/favicon-sts.svg">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Send The Signal">
+    
+    <title>Thank You | SendTheSignal</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" href="../favicon-sts.svg" type="image/svg+xml">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        .thank-you-section {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 4rem 2rem;
+        }
+        
+        .email-instructions {
+            background-color: var(--primary-light);
+            border-radius: 8px;
+            padding: 2rem;
+            margin: 2rem 0;
+            text-align: left;
+        }
+        
+        .instructions-title {
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+        
+        .email-step {
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        .step-number {
+            background-color: var(--primary);
+            color: white;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            margin-right: 1rem;
+            flex-shrink: 0;
+            font-size: 0.875rem;
+        }
+        
+        .provider-instructions {
+            display: none; /* Hidden by default */
+            margin-top: 1.5rem;
+            padding: 1rem;
+            background-color: white;
+            border-radius: 6px;
+            box-shadow: var(--shadow);
+        }
+        
+        .provider-title {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--secondary);
+        }
+        
+        .next-steps {
+            margin-top: 3rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <h1><span class="hashtag">#</span>SendTheSignal</h1>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="thank-you-section">
+            <h2>Thank You for Sending the Signal!</h2>
+            <p>Your submission has been received. We'll be reaching out shortly with access to our search portal.</p>
+            
+            <div class="email-instructions">
+                <div class="instructions-title">Important: Ensure You Receive Our Communications</div>
+                <p>To ensure our follow-up emails reach your inbox:</p>
+                
+                <div class="email-step">
+                    <div class="step-number">1</div>
+                    <div>Check your inbox for a confirmation email (which should arrive in the next few minutes)</div>
+                </div>
+                
+                <div class="email-step">
+                    <div class="step-number">2</div>
+                    <div>Add <strong>contact@sendthesignal.earth</strong> to your contacts or safe senders list</div>
+                </div>
+                
+                <div class="email-step">
+                    <div class="step-number">3</div>
+                    <div>If you don't see our email, please check your spam/junk folder and mark it as "Not Spam"</div>
+                </div>
+                
+                <div id="emailProviderSelector">
+                    <p>Select your email provider for specific instructions:</p>
+                    <select id="providerDropdown">
+                        <option value="">-- Select Your Email Provider --</option>
+                        <option value="gmail">Gmail</option>
+                        <option value="outlook">Outlook / Microsoft 365</option>
+                        <option value="apple">Apple Mail</option>
+                        <option value="yahoo">Yahoo Mail</option>
+                        <option value="other">Other Email Provider</option>
+                    </select>
+                </div>
+                
+                <!-- Gmail Instructions -->
+                <div id="gmail-instructions" class="provider-instructions">
+                    <div class="provider-title">Gmail Instructions:</div>
+                    <ol>
+                        <li>Open the email from contact@sendthesignal.earth</li>
+                        <li>Click the three dots (more options) at the top right of the email</li>
+                        <li>Select "Add to Contacts"</li>
+                        <li>If the email was in spam, also click "Report not spam"</li>
+                    </ol>
+                </div>
+                
+                <!-- Outlook Instructions -->
+                <div id="outlook-instructions" class="provider-instructions">
+                    <div class="provider-title">Outlook / Microsoft 365 Instructions:</div>
+                    <ol>
+                        <li>Right-click on the email from contact@sendthesignal.earth</li>
+                        <li>Select "Junk" > "Never Block Sender"</li>
+                        <li>You can also add the email to your contacts by right-clicking and selecting "Add to Outlook contacts"</li>
+                    </ol>
+                </div>
+                
+                <!-- Apple Mail Instructions -->
+                <div id="apple-instructions" class="provider-instructions">
+                    <div class="provider-title">Apple Mail Instructions:</div>
+                    <ol>
+                        <li>Open the email from contact@sendthesignal.earth</li>
+                        <li>Click the sender's name/email at the top</li>
+                        <li>Click "Add to Contacts"</li>
+                        <li>If the email was in junk, move it to your inbox</li>
+                    </ol>
+                </div>
+                
+                <!-- Yahoo Mail Instructions -->
+                <div id="yahoo-instructions" class="provider-instructions">
+                    <div class="provider-title">Yahoo Mail Instructions:</div>
+                    <ol>
+                        <li>Open the email from contact@sendthesignal.earth</li>
+                        <li>Click the three dots (more options)</li>
+                        <li>Select "Add contact"</li>
+                        <li>If the email was in spam, also click "Not Spam"</li>
+                    </ol>
+                </div>
+                
+                <!-- Other Email Provider Instructions -->
+                <div id="other-instructions" class="provider-instructions">
+                    <div class="provider-title">General Instructions:</div>
+                    <ol>
+                        <li>Look for options to "Add to Contacts," "Add to Address Book," or similar</li>
+                        <li>Check for "Mark as Safe" or "Always Allow" settings</li>
+                        <li>If our email is in your spam/junk folder, look for an option like "Not Spam" or "Move to Inbox"</li>
+                        <li>Consider adding sendthesignal.earth to your domain whitelist if you have access to your organization's email settings</li>
+                    </ol>
+                </div>
+            </div>
+            
+            <div class="next-steps">
+                <h3>What Happens Next?</h3>
+                <p>Within 1-2 business days, you'll receive access to our search portal where you can submit your specific needs and discover relevant climate solutions.</p>
+                <p>If you have any questions, please contact us at <a href="mailto:contact@sendthesignal.earth">contact@sendthesignal.earth</a>.</p>
+            </div>
+            
+            <a href="https://sendthesignal.earth" class="submit-button" style="display: inline-block; margin-top: 2rem; text-decoration: none; max-width: 300px;">Return to Home</a>
+        </section>
+    </main>
+    
+    <footer class="container">
+        <p>Together, we can build momentum for the climate solutions of tomorrow while creating valuable market intelligence.</p>
+    </footer>
+
+    <script>
+        // Show specific provider instructions when selected
+        document.getElementById('providerDropdown').addEventListener('change', function() {
+            // Hide all provider instructions first
+            const allInstructions = document.querySelectorAll('.provider-instructions');
+            allInstructions.forEach(el => el.style.display = 'none');
+            
+            // Show the selected provider instructions
+            const selected = this.value;
+            if (selected) {
+                document.getElementById(selected + '-instructions').style.display = 'block';
+            }
+        });
+        
+        // Check if user's email domain matches common providers and pre-select
+        document.addEventListener('DOMContentLoaded', function() {
+            const userDomain = localStorage.getItem('userEmailDomain');
+            if (userDomain) {
+                const dropdown = document.getElementById('providerDropdown');
+                
+                if (userDomain.includes('gmail.com')) {
+                    dropdown.value = 'gmail';
+                } else if (userDomain.includes('outlook.com') || userDomain.includes('hotmail.com') || userDomain.includes('live.com') || userDomain.includes('office.com') || userDomain.includes('microsoft.com')) {
+                    dropdown.value = 'outlook';
+                } else if (userDomain.includes('yahoo.com')) {
+                    dropdown.value = 'yahoo';
+                } else if (userDomain.includes('icloud.com') || userDomain.includes('me.com') || userDomain.includes('mac.com')) {
+                    dropdown.value = 'apple';
+                }
+                
+                // Trigger the change event to show the instructions
+                const event = new Event('change');
+                dropdown.dispatchEvent(event);
+            }
+        });
+    </script>
+</body>
+</html>
