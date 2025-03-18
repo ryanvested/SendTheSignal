@@ -327,37 +327,43 @@ footer {
 
 <!-- CSS to add to your stylesheet -->
 <style>
-    /* Make the placeholder containers transparent with just an outline */
-    .placeholder-logo {
+    /* Base styles for all logo boxes */
+    .logo-box {
+        width: 100%;
+        height: 120px;
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 100%;
-        height: 120px; /* Adjust height as needed */
-        border: 2px dashed #ccc; /* Light gray dashed border */
+        margin: 10px;
+        box-sizing: border-box;
+    }
+    
+    /* Styles only for placeholders */
+    .logo-box.placeholder {
+        background-color: #6c757d; /* Gray background */
+        color: rgba(255, 255, 255, 0.7); /* Semi-transparent white text */
         border-radius: 8px;
-        background: transparent; /* Transparent background */
+    }
+    
+    /* Styles for boxes with actual logos */
+    .logo-box.has-logo {
+        background-color: transparent; /* No background */
+        border: none; /* No border */
         padding: 15px;
-        transition: all 0.3s ease;
     }
     
-    /* Style for the placeholder text */
-    .placeholder-text {
-        color: #aaa;
-        font-size: 16px;
-    }
-    
-    /* Style for the uploaded partner logos */
+    /* Style for the partner logos */
     .partner-logo {
         max-width: 100%;
         max-height: 100%;
-        object-fit: contain; /* This preserves aspect ratio */
-        display: block;
-        margin: 0 auto;
+        object-fit: contain; /* Preserves aspect ratio */
     }
     
-    /* Optional hover effect to highlight the placeholder */
-    .placeholder-logo:hover {
-        border-color: #999;
+    /* Container for all logos */
+    .logo-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
     }
 </style>
